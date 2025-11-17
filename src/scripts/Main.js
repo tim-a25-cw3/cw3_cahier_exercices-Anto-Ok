@@ -1,5 +1,7 @@
 import Icons from './utils/Icons.js';
 
+import Swiper from 'swiper/bundle';
+
 class Main {
   constructor() {
     this.init();
@@ -7,6 +9,18 @@ class Main {
 
   init() {
     Icons.load();
+    this.initSwiper();
+  }
+
+  initSwiper() {
+    const target = document.querySelector('.js-swiper');
+
+    const swiper = new Swiper(target, {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+    });
   }
 }
 new Main();

@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    .tag {
+        font-size: typo(18px);
+        font-weight: 300;
+    }
+}
+
+.card-right {
+    .card__media {
+        order: 1;
+    }
+}
+
+.card__media {
+    width: 594px;
+    height: 490px;
+
+    display: flex;
+    align-items: center;
+
+    img {
+        border-radius: 16px;
+    }
+}
