@@ -3,8 +3,12 @@
     align-items: center;
     gap: 32px;
 
+    @media (width <= $breakpoint-md) {
+        flex-direction: column;
+    }
+
     .tag {
-        font-size: typo(18px);
+        font-size: typo(12px, 18px);
         font-weight: 300;
     }
 }
@@ -12,6 +16,10 @@
 .card-right {
     .card__media {
         order: 1;
+
+        @media (width <= $breakpoint-md) {
+            order: 0;
+        }
     }
 }
 
